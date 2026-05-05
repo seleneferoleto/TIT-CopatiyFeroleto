@@ -1,0 +1,291 @@
+
+:root {
+    /* Colores - reemplazá con los tuyos */
+    --color-primario: #5f914cf3;
+    --color-secundario: #3a6828f3;
+    --color-fondo: #f8fafc;
+    --color-texto: #2b3d24f3;
+    --color-texto-suave: #64748b;
+    --color-blanco: #ffffff;
+    --color-borde: #e2e8f0;
+
+    /* Tipografía */
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --tamanio-base: 16px;
+
+    /* Espaciados */
+    --espacio-xs: 0.5rem;
+    --espacio-sm: 1rem;
+    --espacio-md: 2rem;
+    --espacio-lg: 4rem;
+
+    /* Imágenes - agregá las URLs acá */
+    --img-perfil: url('[ /imagen/ ]');
+    --img-fondo-header: url('[]');
+
+    /* Otros */
+    --radio-borde: 8px;
+    --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: var(--tamanio-base);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--color-primario);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+header {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: var(--espacio-md) var(--espacio-sm);
+}
+
+.header-foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-blanco);
+    margin: 0 auto var(--espacio-sm);
+}
+
+.header-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: var(--espacio-xs);
+}
+
+.header-titulo {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.header-ubicacion {
+    font-size: 0.95rem;
+    opacity: 0.75;
+    margin-top: var(--espacio-xs);
+}
+
+/* NAV */
+.nav-principal {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-xs);
+    margin-top: var(--espacio-md);
+}
+
+.nav-principal a {
+    color: var(--color-blanco);
+    font-weight: bold;
+    padding: var(--espacio-xs) var(--espacio-sm);
+    border: 2px solid var(--color-blanco);
+    border-radius: var(--radio-borde);
+    transition: background-color 0.3s;
+}
+
+.nav-principal a:hover {
+    background-color: var(--color-secundario);
+    text-decoration: none;
+}
+
+
+section {
+    padding: var(--espacio-md) var(--espacio-sm);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+section h2 {
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    margin-bottom: var(--espacio-sm);
+}
+
+
+.lista-habilidades {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-xs);
+}
+
+.lista-habilidades li {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.cuadricula-proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-md);
+}
+
+.tarjeta-proyecto {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    padding: var(--espacio-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-proyecto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--radio-borde);
+    margin-bottom: var(--espacio-sm);
+}
+
+.tarjeta-proyecto h3 {
+    margin-bottom: var(--espacio-xs);
+    font-size: 1.1rem;
+}
+
+.tarjeta-proyecto p {
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+    margin-bottom: var(--espacio-xs);
+    flex-grow: 1;
+}
+
+.tarjeta-proyecto a {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radio-borde);
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.tarjeta-proyecto a:hover {
+    background-color: var(--color-secundario);
+    text-decoration: none;
+}
+
+
+.linea-tiempo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-md);
+}
+
+.linea-tiempo-elemento {
+    border-left: 4px solid var(--color-primario);
+    padding-left: var(--espacio-sm);
+}
+
+.linea-tiempo-fecha {
+    font-size: 0.85rem;
+    color: var(--color-texto-suave);
+}
+
+.linea-tiempo-elemento h3 {
+    margin: var(--espacio-xs) 0;
+}
+
+.lista-contacto {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-xs);
+}
+
+.lista-contacto li {
+    font-size: 1rem;
+}
+
+footer {
+    background-color: var(--color-texto);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: var(--espacio-md) var(--espacio-sm);
+}
+
+.footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: var(--espacio-sm);
+    margin-top: var(--espacio-xs);
+}
+
+.footer-redes a {
+    color: var(--color-blanco);
+    opacity: 0.8;
+}
+
+.footer-redes a:hover {
+    opacity: 1;
+}
+
+@media (min-width: 600px) {
+    .nav-principal {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cuadricula-proyectos {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .tarjeta-proyecto {
+        flex: 1 1 calc(50% - var(--espacio-md));
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: var(--espacio-lg) var(--espacio-lg);
+    }
+
+    section {
+        padding: var(--eme gusto mucho la estructura de la web, pero las etiquetas en el codigo tienen que estar en españolspacio-lg);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .tarjeta-proyecto {
+        flex: 1 1 calc(33% - var(--espacio-md));
+    }
+
+    .header-info h1 {
+        font-size: 2.5rem;
+    }
+}
