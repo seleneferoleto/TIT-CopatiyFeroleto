@@ -1,6 +1,5 @@
 
 :root {
-    /* Colores - reemplazá con los tuyos */
     --color-primario: #5f914cf3;
     --color-secundario: #3a6828f3;
     --color-fondo: #f8fafc;
@@ -9,21 +8,14 @@
     --color-blanco: #ffffff;
     --color-borde: #e2e8f0;
 
-    /* Tipografía */
     --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --tamanio-base: 16px;
 
-    /* Espaciados */
     --espacio-xs: 0.5rem;
     --espacio-sm: 1rem;
     --espacio-md: 2rem;
     --espacio-lg: 4rem;
 
-    /* Imágenes - agregá las URLs acá */
-    --img-perfil: url('[ /imagen/ ]');
-    --img-fondo-header: url('[]');
-
-    /* Otros */
     --radio-borde: 8px;
     --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
